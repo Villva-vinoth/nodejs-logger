@@ -8,13 +8,13 @@ const processImage = async (filePath) => {
     `${path.basename(filePath, path.extname(filePath))}-processed.png`
   );
 
-  // await sharp(filePath)
-  //   // .resize(300, 300, { fit: 'contain' }) // Resize to 300x300 pixels
-  //   // .toFormat('jpeg')
-  //   .png()
-  //   // .jpeg({ quality: 80 })
-  //   // .webp({ quality: 80 })
-  //   .toFile(outputFilePath);
+  await sharp(filePath)
+    // .resize(300, 300, { fit: 'contain' }) // Resize to 300x300 pixels
+    // .toFormat('jpeg')
+    .png()
+    // .jpeg({ quality: 80 })
+    // .webp({ quality: 80 })
+    .toFile(outputFilePath);
 
   return outputFilePath;
 };
